@@ -1,0 +1,4 @@
+DataConvert.Droid.MainActivity, DataConvert.Android;md54afefb4162f6baeb8510ee1fda663222.MainActivity
+DataConvert.Droid.MainActivity, DataConvert.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54afefb4162f6baeb8510ee1fda663222.MainActivity
+DataConvert.Droid.MainActivity;md54afefb4162f6baeb8510ee1fda663222.MainActivity
+dataconvert.droid.MainActivity;md54afefb4162f6baeb8510ee1fda663222.MainActivity
