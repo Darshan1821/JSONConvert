@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace DataConvert.Droid
 {
@@ -15,8 +16,9 @@ namespace DataConvert.Droid
 	{
         TextView jsonData, objectData;
         Button deserialize;
-        string json = "{'firstName':'Darshan','middleName':'R','lastName':'Bangoria','attributes':[{'value':'9428215644'},{'value':'9909133784'},{'value':'d@gmail.com'},{'value':'a@gmail.com'}]}";
-        Person p;
+        string json = "[{'firstName':'Darshan','middleName':'R','lastName':'Bangoria','attributes':[{'value':'9428215644'},{'value':'9909133784'},{'value':'d@gmail.com'},{'value':'a@gmail.com'}]},{'firstName':'Kandarp','middleName':'M','lastName':'Joshi','attributes':[{'value':'9898989898'},{'value':'9988776655'},{'value':'k@gmail.com'},{'value':'m@gmail.com'}]}]";
+        List<Person> person;
+        string objectstring="";
 
         protected override void OnCreate (Bundle bundle)
 		{
@@ -34,14 +36,18 @@ namespace DataConvert.Droid
 
         private void Deserialize_Click(object sender, EventArgs e)
         {
-            p = JsonConvert.DeserializeObject<Person>(json);
+            person = JsonConvert.DeserializeObject<List<Person>>(json);
 
-            string objectstring = "FirstName: "+p.firstName+"\nMiddleName: "+p.middleName+"\nLastName: "+p.lastName+"\nAttributes:\n";
-
-            foreach(var d in p.attributes)
+            foreach (var p in person)
             {
-                objectstring = objectstring + d.value + "\n";
-                Toast.MakeText(this, d.value,ToastLength.Short).Show();
+                objectstring += "FirstName: " + p.firstName + "\nMiddleName: " + p.middleName + "\nLastName: " + p.lastName + "\nAttributes:\n";
+
+                foreach (var d in p.attributes)
+                {
+                    objectstring = objectstring + d.value + "\n";
+                }
+                objectstring += "\n\n";
+                Toast.MakeText(this, p.firstName,ToastLength.Short).Show();
             }
             objectData.Text = objectstring;
         }

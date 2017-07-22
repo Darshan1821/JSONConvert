@@ -13,6 +13,9 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DataConvert", "DataConvert\
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		DataConvert\DataConvert\DataConvert.projitems*{3c43026e-93fd-4aff-b472-cbe882497621}*SharedItemsImports = 4
+		DataConvert\DataConvert\DataConvert.projitems*{3e4a5b43-61f3-437e-945d-626327315dae}*SharedItemsImports = 4
+		DataConvert\DataConvert\DataConvert.projitems*{a6159b10-25b5-4d0c-b818-579c6bf36ab8}*SharedItemsImports = 4
 		DataConvert\DataConvert\DataConvert.projitems*{ad614988-fd0e-4f67-bf33-f120a8ef5216}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
