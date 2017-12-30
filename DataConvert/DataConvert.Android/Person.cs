@@ -14,6 +14,7 @@ namespace DataConvert.Droid
 {
     class Person
     {
+        //Declarations
         public string firstName { get; set; }
         public string middleName { get; set; }
         public string lastName { get; set; }

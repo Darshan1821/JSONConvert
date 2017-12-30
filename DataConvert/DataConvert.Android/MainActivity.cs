@@ -14,6 +14,7 @@ namespace DataConvert.Droid
 	[Activity (Label = "DataConvert.Android", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
+        //Declarations
         TextView jsonData, objectData;
         Button deserialize;
         string json = "[{'firstName':'Darshan','middleName':'R','lastName':'Bangoria','attributes':[{'value':'9428215644'},{'value':'9909133784'},{'value':'d@gmail.com'},{'value':'a@gmail.com'}]},{'firstName':'Kandarp','middleName':'M','lastName':'Joshi','attributes':[{'value':'9898989898'},{'value':'9988776655'},{'value':'k@gmail.com'},{'value':'m@gmail.com'}]}]";
@@ -34,8 +35,10 @@ namespace DataConvert.Droid
             deserialize.Click += Deserialize_Click;
         }
 
+        //set Onclick Listner
         private void Deserialize_Click(object sender, EventArgs e)
         {
+            //deserialize the JSON sting to person objects
             person = JsonConvert.DeserializeObject<List<Person>>(json);
 
             foreach (var p in person)
